@@ -6,11 +6,155 @@
 
 html {
     font-size: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-image: url(/img/nordwood-themes-nDd3dIkkOLo-unsplash.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.section {
+    position: relative;
+    background: rgb(209, 232, 248);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 500ms ease;
+}
+
+.dark {
+    background: rgb(7, 0, 15);
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    background: #fff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.025);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark .card {
+    background: #333;
+}
+
+.content,
+.imgText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgBox {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    margin-bottom: 25px;
+}
+
+.imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.imgText h3 {
+    font-size: 1.25em;
+    line-height: 1.5;
+    text-align: center;
+    color: royalblue;
+    transition: color 500ms ease;
+}
+
+.dark .imgText h3 {
+    color: #fff;
+}
+
+.imgText h3 span {
+    font-size: 0.9em;
+    color: #555;
+    transition: color 500ms ease;
+}
+
+.dark .imgText h3 span {
+    color: #999;
+}
+
+.social {
+    display: flex;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 35px;
+    color: royalblue;
+    opacity: 0.8;
+    margin: 40px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms ease;
+}
+
+.dark .social li a {
+    color: #fff;
+}
+
+.social li a:hover,
+.social li a:focus {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: royalblue;
+    opacity: 0.3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 500ms ease;
+}
+
+.dark .toggle {
+    opacity: 0.9;
+    background: #fff;
+}
+
+.toggle::before {
+    font-family: fontAwesome;
+    content: '\f186';
+    color: #fff;
+}
+
+.dark .toggle::before {
+    font-family: fontAwesome;
+    content: '\f0eb';
+    color: #777;
+}
+
+.moon {
+    display: none;
+}
+
+.dark .moon {
+    display: block;
 }
